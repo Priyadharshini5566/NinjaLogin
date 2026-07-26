@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+    background:#0f172a;
+}
+
+.login-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#6d28d9);
+}
+
+.bg-shape{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    animation:float 8s ease-in-out infinite;
+}
+
+.shape1{
+    width:350px;
+    height:350px;
+    background:#38bdf8;
+    top:-100px;
+    left:-100px;
+}
+
+.shape2{
+    width:400px;
+    height:400px;
+    background:#a855f7;
+    bottom:-120px;
+    right:-120px;
+}
+
+.login-card{
+    width:100%;
+    max-width:1100px;
+    min-height:650px;
+    display:flex;
+    border-radius:25px;
+    overflow:hidden;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    animation:appear 1s ease;
+}
+
+.left-panel{
+    width:45%;
+    padding:60px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    background:linear-gradient(rgba(255,255,255,.08),rgba(255,255,255,.04));
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:45px;
+    margin-bottom:20px;
+    background:rgba(255,255,255,.18);
+}
+
+.brand h1{
+    font-size:42px;
+    font-weight:700;
+}
+
+.brand p{
+    margin-top:10px;
+    color:#dbeafe;
+    font-size:17px;
+}
+
+.welcome-text h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.welcome-text p{
+    line-height:1.8;
+    color:#dbeafe;
+}
+
+.right-panel{
+    width:55%;
+    background:white;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.right-panel h2{
+    font-size:34px;
+    color:#1e3a8a;
+    margin-bottom:35px;
+}
+
+.input-box{
+    margin-bottom:25px;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#334155;
+}
+
+.input-field{
+    position:relative;
+}
+
+.icon{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:18px;
+}
+
+.input-field input{
+    width:100%;
+    height:58px;
+    padding-left:55px;
+    padding-right:55px;
+    border-radius:14px;
+    border:2px solid #e2e8f0;
+    font-size:16px;
+    transition:.3s;
+    outline:none;
+}
+
+.input-field input:focus{
+    border-color:#4f46e5;
+    box-shadow:0 0 0 5px rgba(79,70,229,.15);
+}
+
+.eye{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:20px;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px 0 35px;
+    font-size:15px;
+}
+
+.options label{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    color:#475569;
+}
+
+.options a{
+    text-decoration:none;
+    color:#4f46e5;
+    font-weight:600;
+}
+
+.options a:hover{
+    text-decoration:underline;
+}
+
+.login-btn{
+    width:100%;
+    height:58px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 15px 25px rgba(79,70,229,.35);
+}
+
+.login-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 20px 35px rgba(79,70,229,.45);
+}
+
+.signup{
+    margin-top:30px;
+    text-align:center;
+    color:#64748b;
+}
+
+.signup span{
+    color:#4f46e5;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.signup span:hover{
+    text-decoration:underline;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(30px);
+    }
+}
+
+@media(max-width:900px){
+
+    .login-card{
+        flex-direction:column;
+    }
+
+    .left-panel,
+    .right-panel{
+        width:100%;
+    }
+
+    .left-panel{
+        text-align:center;
+        align-items:center;
+        padding:40px;
+    }
+
+    .logo{
+        margin:auto auto 20px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .right-panel{
+        padding:35px 25px;
+    }
+
+    .left-panel{
+        padding:35px 25px;
+    }
+
+    .brand h1{
+        font-size:32px;
+    }
+
+    .welcome-text h2{
+        font-size:28px;
+    }
+
+}
